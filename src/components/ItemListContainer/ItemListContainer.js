@@ -1,6 +1,6 @@
 const ItemListContainer = () => {
     return (
-        <div style = {{backgroundColor: 'red', width: '250px', height: '200px'}}>
+        <div style = {{backgroundColor: 'red'}}>
             <h1>Rademia Store</h1>
         </div>
     )
