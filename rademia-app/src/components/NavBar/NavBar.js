@@ -1,4 +1,5 @@
 import lgrademia from './lgrademia.png'
+import cart from './cart.png'
 import './NavBar-container.css';
 
 const NavBar = () => {
@@ -29,7 +30,7 @@ const NavBar = () => {
 
 
                 <div>
-                    <button>LOGIN</button>
+                    <img src={cart} alt="cart1" style ={{width: '40px', height: '40px', padding: '10px'}}></img>
                 </div>
 
             </div>
@@ -40,5 +41,8 @@ const NavBar = () => {
     )
 
 };
+
+
+
 
 export default NavBar;

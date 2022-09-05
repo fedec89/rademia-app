@@ -1,27 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
-import PrimerComponente from './components/PrimerComponente';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from '../src/components/NavBar/NavBar'
+import Counter from '../src/components/Contador/contador'
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
+      <h1>Rademia Store!</h1>
       <header className="App-header">
-        <PrimerComponente/>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Counter stock={10} initial={1}/>
+        
+       <div className='prod-container'>
+        <ItemListContainer/>
+      </div>
       </header>
+     
+      
     </div>
   );
 }
