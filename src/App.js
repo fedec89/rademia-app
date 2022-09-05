@@ -8,10 +8,15 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      <h1>Rademia Store!</h1>
       <header className="App-header">
+        <Counter stock={10} initial={1}/>
+        
+       <div className='prod-container'>
         <ItemListContainer/>
-        <Counter stock={10} initial = {1}/>
+      </div>
       </header>
+     
       
     </div>
   );
