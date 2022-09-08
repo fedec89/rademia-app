@@ -1,9 +1,9 @@
-import data from "./mockdata";
+import data from "../ItemListContainer/mockdata"
 import { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemDetailList from "./ItemDetailList";
 
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
     const [items, setItems] = useState([]);
 
 
@@ -28,11 +28,9 @@ const ItemListContainer = () => {
 
 
     return (
-            <> 
-            <ItemList itemsList={items} />
-
-            </>
+            <>{items.length > 0 ? (<ItemDetailList bornicoc={items[1]}/>) : (<h2>Cargando...</h2>)}</>
+           
             );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;
