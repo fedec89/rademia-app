@@ -1,6 +1,7 @@
 import lgrademia from './lgrademia.png'
 import cart from './cart.png'
 import './NavBar-container.css';
+import {Link, link} from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -14,15 +15,27 @@ const NavBar = () => {
                 <div>
                     <ul>
                         <li>
-                            <a href="#"> Home </a>
+                            <Link to="/"> Home</Link>  
                         </li>
 
                         <li>
-                            <a href="#"> Productos </a>
+                            <Link to="/productos">Productos</Link>
                         </li>
 
                         <li>
-                            <a href="#"> Contacto </a>
+                            <Link to="/productos/placa">Placas</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/productos/procesador">Procesadores</Link>
+                        </li>                        
+
+                        <li>
+                            <Link to="/masvendido">Top Vendidos</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/">Contacto</Link>
                         </li>
                     </ul>
 
