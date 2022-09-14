@@ -7,7 +7,7 @@ const ItemDetailList = ({bornicoc}) => {
     
 
     return (<>
-                <div className='prod-container'>
+                <div className='prod3'>
                   
                   
                     <ItemDetails items={bornicoc}/>

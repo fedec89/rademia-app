@@ -1,6 +1,7 @@
 .prod-container {
     width: 100%;
     display: flex;
+    
     justify-content: space-evenly;
     padding: 30px;
     
@@ -22,5 +23,13 @@
 .prod2 {
     border: 2px dotted rgb(255, 113, 47);
     padding: 15px;
+    width: fit-content;
+    
+}
+
+.prod3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }

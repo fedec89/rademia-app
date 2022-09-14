@@ -5,7 +5,7 @@ const data = [
         "tipo": "placa",
         "modelo": "Geforce-Gtx-3070",
         "precio": 300,
-        "cantidad": 1,
+        "cantidad": 2,
     },
 
     {
@@ -14,7 +14,7 @@ const data = [
         "tipo": "placa",
         "modelo": "Geforce-Gtx-3060",
         "precio": 250,
-        "cantidad": 1,
+        "cantidad": 4,
 
     },
 
@@ -24,7 +24,7 @@ const data = [
         "tipo": "procesador",
         "modelo": "Intel-i7",
         "precio": 300,
-        "cantidad": 1,
+        "cantidad": 5,
     },
 
     {
@@ -33,7 +33,7 @@ const data = [
         "tipo": "procesador",
         "modelo": "Intel-i9",
         "precio": 350,
-        "cantidad": 1
+        "cantidad": 5
 
     },
 
@@ -43,7 +43,7 @@ const data = [
         "tipo": "procesador",
         "modelo": "AMD-RYZEN",
         "precio": 300,
-        "cantidad": 1
+        "cantidad": 3
     },
 
 

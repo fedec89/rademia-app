@@ -1,8 +1,17 @@
-
+import Counter from '../Contador/contador'
 import "../Item/items.css"
 
     const ItemDetails = ({items}) => {
-      console.log(items);
+      const onAdd= (contador) => {
+        console.log(`recibimos banda amigo ${contador}`)
+
+
+      } 
+      
+
+
+
+
         return (
   
           <>
@@ -12,8 +21,9 @@ import "../Item/items.css"
               <h4>Tipo: {items.tipo}</h4>
               <p>Modelo: {items.modelo}</p>
               <p>Precio: {items.precio}</p>
-              <p>Stock: {items.cantidad}</p>
+              <p>Stock: {items.cantidad}</p>              
           </div>
+          <Counter stock={items.cantidad} initial={1} onAdd={onAdd}/>
           </>
         );
     };
