@@ -2,7 +2,7 @@ const data = [
     {
         "id": 1,
         "image": './imagenes/geforce3070.jpg',
-        "tipo": "Placa",
+        "tipo": "placa",
         "modelo": "Geforce-Gtx-3070",
         "precio": 300,
         "cantidad": 1,
@@ -11,7 +11,7 @@ const data = [
     {
         "id": 2,
         "image": '../imagenes/geforce3060.jpg',
-        "tipo": "Placa",
+        "tipo": "placa",
         "modelo": "Geforce-Gtx-3060",
         "precio": 250,
         "cantidad": 1,
@@ -21,7 +21,7 @@ const data = [
     {
         "id": 3,
         "image": '../imagenes/inteli7.jpg',
-        "tipo": "Procesador",
+        "tipo": "procesador",
         "modelo": "Intel-i7",
         "precio": 300,
         "cantidad": 1,
@@ -30,7 +30,7 @@ const data = [
     {
         "id": 4,
         "image": '../imagenes/inteli9.jpg',
-        "tipo": "Procesador",
+        "tipo": "procesador",
         "modelo": "Intel-i9",
         "precio": 350,
         "cantidad": 1
@@ -40,7 +40,7 @@ const data = [
     {
         "id": 5,
         "image": '../imagenes/ryzen.jpg',
-        "tipo": "Procesador",
+        "tipo": "procesador",
         "modelo": "AMD-RYZEN",
         "precio": 300,
         "cantidad": 1

@@ -1,17 +1,20 @@
 
 import "../Item/items.css"
 
-    const ItemDetails = ({id, img, tipo, modelo, precio, cantidad}) => {
+    const ItemDetails = ({items}) => {
+      console.log(items);
         return (
   
-      
+          <>
+          
           <div className="prod2">
-                <h2>Mas vendido!</h2>            
-              <h4>Tipo: {tipo}</h4>
-              <p>Modelo: {modelo}</p>
-              <p>Precio: {precio}</p>
-              <p>Stock: {cantidad}</p>
+                       
+              <h4>Tipo: {items.tipo}</h4>
+              <p>Modelo: {items.modelo}</p>
+              <p>Precio: {items.precio}</p>
+              <p>Stock: {items.cantidad}</p>
           </div>
+          </>
         );
     };
   

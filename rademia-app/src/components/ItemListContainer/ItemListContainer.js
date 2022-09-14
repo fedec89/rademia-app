@@ -2,14 +2,15 @@ import data from "./mockdata";
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import '../Item/items.css'
 
 
 const ItemListContainer = () => {
     
-    const {categoryId} = useParams ();
-
+    
     const [items, setItems] = useState([]);
-
+    const {categoryId} = useParams ();
+    
 
     const getData = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -21,8 +22,12 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         getData.then((result) => {
-            const newProducts = result.filter(item=> item.tipo === categoryId)
-            setItems(result);
+            if(categoryId){ const nuevos = result.filter(cosa=> cosa.tipo === categoryId)
+                setItems(nuevos);}
+            else {
+                setItems(result)
+            };
+            
             
         });
         
@@ -34,7 +39,11 @@ const ItemListContainer = () => {
 
     return (
             <> 
+            
+            <div className='prod-container'>
+                  
             <ItemList itemsList={items} />
+            </div>
 
             </>
             );

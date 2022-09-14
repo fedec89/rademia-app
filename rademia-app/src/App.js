@@ -14,11 +14,12 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <NavBar/>  
-          <div>
+          
             <Routes>                    
               <Route path="/productos" element={<ItemListContainer/>}/>
               <Route path="/productos/:categoryId" element={<ItemListContainer/>}/>
-              <Route path="/masvendido" element={<ItemDetailContainer/>}/>                                
+              <Route path="/masvendido" element={<ItemDetailContainer/>}/>
+              <Route path="/item/:productId" element={<ItemDetailContainer/>}/>                                
                  
             </Routes>
               
@@ -37,7 +38,7 @@ function App() {
               
               </header> */}
             
-          </div>        
+                  
         </div>
       </BrowserRouter>
 

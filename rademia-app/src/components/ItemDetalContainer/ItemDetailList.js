@@ -1,19 +1,18 @@
 import ItemDetails from "./ItemDetail";
+import '../Item/items.css'
 
 const ItemDetailList = ({bornicoc}) => {
-    console.log(bornicoc)
+
 
     
 
     return (<>
-                <ItemDetails
-                            img={bornicoc.img}
-                            key={bornicoc.id}
-                            modelo = {bornicoc.modelo}
-                            tipo={bornicoc.tipo}
-                            precio={bornicoc.precio}
-                            cantidad={bornicoc.cantidad}/> 
-            </>);
+                <div className='prod-container'>
+                  
+                  
+                    <ItemDetails items={bornicoc}/>
+                           
+                  </div></>);
    
 
 }

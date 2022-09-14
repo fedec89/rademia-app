@@ -31,10 +31,6 @@ const NavBar = () => {
                         </li>                        
 
                         <li>
-                            <Link to="/masvendido">Top Vendidos</Link>
-                        </li>
-
-                        <li>
                             <Link to="/">Contacto</Link>
                         </li>
                     </ul>

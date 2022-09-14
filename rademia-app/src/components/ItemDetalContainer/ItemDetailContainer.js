@@ -1,34 +1,38 @@
 import data from "../ItemListContainer/mockdata"
 import { useState, useEffect } from "react";
 import ItemDetailList from "./ItemDetailList";
+import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer = () => {
+    const {productId} = useParams();
     const [items, setItems] = useState([]);
+   
 
 
-    const getData = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data);
-        }, 2000);
-
-    } );
+   const getItem = (id) => {
+    return new Promise ((resolve, reject) =>{
+        const producto = data.find(item => item.id === parseInt(id) );
+        resolve(producto)
+    })
+   }
 
 
     useEffect(() => {
-        getData.then((result) => {
-            setItems(result);
-            
-        });
-        
-    }, []);
-
+        const getData = async()=> {
+        const producto = await getItem(productId);
+        console.log('producto', producto)
+        setItems(producto);
+       }
+       getData();
+    },[productId])
         
 
 
 
     return (
-            <>{items.length > 0 ? (<ItemDetailList bornicoc={items[1]}/>) : (<h2>Cargando...</h2>)}</>
+            <><ItemDetailList bornicoc={items}/>
+            </>
            
             );
 };
