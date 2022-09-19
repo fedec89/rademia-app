@@ -1,9 +1,14 @@
 import Counter from '../Contador/contador'
 import "../Item/items.css"
+import { CartContext } from '../context/CartContext';
+import { useContext, useState } from 'react';
 
     const ItemDetails = ({items}) => {
+      const {addItem} = useContext (CartContext);
+
       const onAdd= (contador) => {
-        console.log(`recibimos banda amigo ${contador}`)
+        console.log(`recibimos ${contador} productos`)
+        addItem (items, contador);
 
 
       } 

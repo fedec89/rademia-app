@@ -33,13 +33,17 @@ const NavBar = () => {
                         <li>
                             <Link to="/">Contacto</Link>
                         </li>
+                        
+                        
+
+                    
                     </ul>
 
                 </div>
 
 
                 <div>
-                    <img src={cart} alt="cart1" style ={{width: '40px', height: '40px', padding: '10px'}}></img>
+                    <Link to="/cart"><img src={cart} alt="cart1" style ={{width: '40px', height: '40px', padding: '10px'}}></img></Link>
                 </div>
 
             </div>
