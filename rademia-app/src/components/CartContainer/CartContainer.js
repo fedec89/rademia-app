@@ -13,11 +13,12 @@ export const CartContainer = () => {
                    <>
                    <p>{item.modelo} - {item.quantity}</p> 
                    <button onClick={()=>removerItem(item.id)}>Eliminar</button>
+                   </>
                    
-                   </> 
                 ))}
 
                 <button onClick={clear}>Borrar Todo</button>
+                {/* <button onClick={()=>isInCart()}>validate</button> */}
                 
             </div>
             <div>
