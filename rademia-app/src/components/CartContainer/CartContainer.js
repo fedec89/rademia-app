@@ -1,8 +1,9 @@
 import React, {useContext} from "react";
 import { CartContext } from "../context/CartContext";
 
+
 export const CartContainer = () => {
-    const {productCartList, removerItem}= useContext (CartContext);
+    const {productCartList, removerItem, clear}= useContext (CartContext);
 
     return(
         <div>
@@ -12,9 +13,12 @@ export const CartContainer = () => {
                    <>
                    <p>{item.modelo} - {item.quantity}</p> 
                    <button onClick={()=>removerItem(item.id)}>Eliminar</button>
-                   {/* <button onClick={()=>removerTodo(item.id)}>Clear</button> */}
+                   
                    </> 
-                ) )}
+                ))}
+
+                <button onClick={clear}>Borrar Todo</button>
+                
             </div>
             <div>
             
