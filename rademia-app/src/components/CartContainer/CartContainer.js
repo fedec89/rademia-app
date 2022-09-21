@@ -12,7 +12,7 @@ export const CartContainer = () => {
                    <>
                    <p>{item.modelo} - {item.quantity}</p> 
                    <button onClick={()=>removerItem(item.id)}>Eliminar</button>
-                   <button onClick={()=>removerTodo(item.id)}>Clear</button>
+                   {/* <button onClick={()=>removerTodo(item.id)}>Clear</button> */}
                    </> 
                 ) )}
             </div>
