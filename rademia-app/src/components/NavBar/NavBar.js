@@ -2,6 +2,9 @@ import lgrademia from './lgrademia.png'
 import cart from './cart.png'
 import './NavBar-container.css';
 import {Link, link} from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+import { CartWidget } from './CartWidget';
 
 const NavBar = () => {
     return (
@@ -43,7 +46,10 @@ const NavBar = () => {
 
 
                 <div>
-                    <Link to="/cart"><img src={cart} alt="cart1" style ={{width: '40px', height: '40px', padding: '10px'}}></img></Link>
+                    
+                    <CartWidget/>
+
+                    
                 </div>
 
             </div>
