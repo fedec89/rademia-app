@@ -6,6 +6,8 @@ import {CartProvider} from './components/context/CartContext';
 import ItemDetailContainer from './components/ItemDetalContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {CartContainer} from './components/CartContainer/CartContainer';
+import { ProductosPage } from './components/paginas/ProductosPage';
+
 
 
 
@@ -24,6 +26,7 @@ function App() {
               <Route path="/masvendido" element={<ItemDetailContainer/>}/>
               <Route path="/item/:productId" element={<ItemDetailContainer/>}/>
               <Route path="/cart" element={<CartContainer/>}/>
+              <Route path="/ProductosPage" element={<ProductosPage/>}/>
              
                                            
                  

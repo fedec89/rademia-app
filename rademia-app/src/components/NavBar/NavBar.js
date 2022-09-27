@@ -5,6 +5,7 @@ import {Link, link} from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { CartWidget } from './CartWidget';
+import { ProductosPage } from '../paginas/ProductosPage';
 
 const NavBar = () => {
     return (
@@ -34,7 +35,7 @@ const NavBar = () => {
                         </li>                        
 
                         <li>
-                            <a href='/contacto'>Contacto</a>
+                            <Link to="/ProductosPage">Contacto</Link>
                         </li>
                         
                         

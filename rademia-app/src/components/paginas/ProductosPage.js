@@ -3,7 +3,7 @@ import {db} from "../../utils/firebase"
 import {doc, getDoc} from "firebase/firestore";
 
 
-export const productosPage = () => {
+export const ProductosPage = () => {
 
     useEffect (()=> {
         const getData = async()=> {
