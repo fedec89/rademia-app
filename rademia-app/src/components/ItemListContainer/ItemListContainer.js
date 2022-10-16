@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import '../Item/items.css'
+import {db} from '../../utils/firebase';
+import { collection, getDocs } from "firebase/firestore";
 
 
 const ItemListContainer = () => {
@@ -12,7 +14,7 @@ const ItemListContainer = () => {
     const {categoryId} = useParams ();
     
 
-    const getData = new Promise((resolve, reject) => {
+    /* const getData = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(data);
         }, 2000);
@@ -31,9 +33,28 @@ const ItemListContainer = () => {
             
         });
         
-    }, [categoryId]);
+    }, [categoryId]); */
 
+
+
+
+    useEffect(() => {
+        const queryRef = collection(db, "items");
+        getDocs(queryRef).then(respuesta=>{
+            const resultados = respuesta.docs.map(doc=>{
+                const newItem = {
+                    id:doc.id,
+                    ...doc.data(),
+                    
+                }
+                return newItem                
+            });
+            console.log(resultados)
+            setItems(resultados);
+        })
         
+        
+    }, [categoryId]);
 
 
 
