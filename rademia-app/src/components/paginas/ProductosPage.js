@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import {db} from "../../utils/firebase"
-import {doc, getDoc, collection, getDocs} from "firebase/firestore";
+import {doc, getDoc, collection, getDocs, query, where} from "firebase/firestore";
 
 
 export const ProductosPage = () => {
